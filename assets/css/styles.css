@@ -1,0 +1,130 @@
+:root {
+    --yellow: #F4D04E;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --white: #FFFFFF;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 327px;
+    height: 100vh;
+    background-color: var(--yellow);
+}
+/* for mobile */
+.card {
+    background-color: var(--white);
+    outline: 1px solid var(--gray-950);
+    min-width: 327px;
+    min-height: 501px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: rgba(0, 0, 0, 0.986) 10px 10px ;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Cambia a 24px si así lo quieres */
+}
+
+.card__container > :first-child {
+    margin-top: 0;
+}
+
+.card__container > :last-child {
+    margin-bottom: 0;
+}
+
+.card__image {
+    position: relative;
+    min-width: 279px;
+    min-height: 200px;
+    width: 100%;
+    height: auto;
+}
+.image {
+     position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Opcional: para mantener la relación de aspecto */
+}
+.card__content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.card__tag {
+    display: flex;
+    width: 73px;
+    height: 26px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: var(--yellow);
+    font-size: clamp(12px, 2vw, 14px);
+    align-items: center;
+    color: var(--gray-950);
+    font-weight: bold;
+}
+
+.card__date {
+    color: var(--gray-950);
+     font-size: clamp(12px, 2vw, 14px);
+}
+
+.card__description {
+    color: var(--gray-500);
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.card__author {
+    height: 100%;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.card__avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.card__name {
+    font-weight: bold;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* for dektop */
+/* max-width: 384px; */
+/* max-height: 522px; */
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 384px;
+    max-height: 522px;
+    /* Elimina width y height fijos si quieres que crezca solo hasta el máximo */
+  }
+  .card__image {
+    max-width: 360px;
+    max-height: 200px;
+    width: 100%;
+    height: 200px;
+  }
+}
