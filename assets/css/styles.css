@@ -124,13 +124,9 @@ body {
 @media (min-width: 768px) {
   .card {
     max-width: 384px;
-    max-height: 522px;
-    /* Elimina width y height fijos si quieres que crezca solo hasta el máximo */
   }
   .card__image {
     max-width: 360px;
-    max-height: 200px;
     width: 100%;
-    height: 200px;
   }
 }
